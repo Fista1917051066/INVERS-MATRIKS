@@ -61,7 +61,38 @@ int main(){
 		}
 		cout << endl;
 	}cout << endl;
-	cout << endl;
+	cout << endl;	
+
+	
+	/*Mencari Adjoin*/
+	void Adjoin (double *Adj);
+	{
+		cout << "Adjoin Matriks A = \n";
+		for (int i = 1; i <= 3; i++) {
+			for (int j = 1; j <= 3; j++){
+				*(*(pAdj+i) + j) = Kof[j][i];
+				cout << *(*(pAdj+i) + j) << "\t";
+			}
+			cout << endl;
+		}
+		cout << endl;
+		cout << endl;
+	}
 	
 	
+	/*Mencari Invers*/
+	void Invers (double Inv);
+	{
+		cout << "Invers Dari Matriks A = \n";
+		for (int i = 1; i <= 3; i++){
+			for (int j = 1; j <= 3; j++){
+				*(*(pInv+i) + j) = (1 / Det) * (*(*(pAdj+i) + j));
+				cout << *(*(pInv+i) + j) << "\t";
+		}
+		cout << endl;
+	}
+		
+	}
 	
+	return 0;
+}
